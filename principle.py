@@ -1,6 +1,7 @@
 from pynput import keyboard
 from pynput.keyboard import Controller
 import json
+import time
 
 keyController = Controller()
 phrase = ""
@@ -24,6 +25,9 @@ def trigger_expand(trig,action):
         keyController.release(keyboard.Key.shift)
         keyController.press(keyboard.Key.backspace)
         keyController.release(keyboard.Key.backspace)
+
+        time.sleep(0.1)  # Here, small fix for the deletion issue
+
         keyController.type(triggers[trig])
         print(f"Expanded {trig} to {triggers[trig]}")
         click(action)
