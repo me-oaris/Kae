@@ -1,4 +1,4 @@
 {
-    "!name": "Lucian",
-    "!pleur": "Pleuur is tuff"
+    "!test": "This is a test trigger.",
+    "#email": "This is an email trigger."
 }
