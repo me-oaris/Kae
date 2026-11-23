@@ -8,7 +8,7 @@ ctrl = Controller()
 tm = TriggerManager()
 
 current_word = ""
-last_modified = os.getmtime(tm.trigger_file) if os.path.exists(tm.trigger_file) else 0
+last_modified = os.path.getmtime(tm.trigger_file) if os.path.exists(tm.trigger_file) else 0
 
 def check_for_updates():
     global last_modified
@@ -62,5 +62,5 @@ if __name__ == "__main__":
     print("Kae Running... \n Press Ctrl+C to stop")
     tm.list_trigs()
 
-    with keyboard.Listener(on_press==on_press) as listener:
+    with keyboard.Listener(on_press=on_press) as listener:
         listener.join()
